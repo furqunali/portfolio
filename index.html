@@ -157,8 +157,8 @@ footer{padding:34px 0;text-align:center;color:var(--muted);font-size:13px;border
     </div>
     <div class="hero-card">
       <h3>At a glance</h3>
-      <div class="stat"><span>Live production apps</span><b>3+</b></div>
-      <div class="stat"><span>Shipped project repos</span><b>12+</b></div>
+      <div class="stat"><span>Live web app demos</span><b>8</b></div>
+      <div class="stat"><span>Shipped project repos</span><b>15+</b></div>
       <div class="stat"><span>Focus</span><b style="font-size:15px">AI · Automation</b></div>
       <div class="stat"><span>Core stack</span><b style="font-size:15px">Python · React</b></div>
     </div>
@@ -256,21 +256,27 @@ const I={
 
 const featured=[
   {ic:'chart',title:'Enterprise Performance Tracker',desc:'A management dashboard for corporate goals, departmental KPIs and business-segment performance — with role-based views and live report submission.',tags:['React','Recharts','Dashboards','KPI'],live:'https://slp-performance-tracker.vercel.app',repo:'performance-tracker-dashboard'},
-  {ic:'chart',title:'Report Automation Engine',desc:'Turns a raw POS export into a fully-built monthly foodservice report — Excel workbook plus a standalone HTML dashboard — in one command.',tags:['Python','openpyxl','Excel COM','Automation'],live:'https://mto-gg-dashboard.vercel.app',repo:'mto-gg-report-automation'},
+  {ic:'bot',title:'Digital FTE — AI Employee Agent',desc:'An autonomous "digital full-time employee": watches an inbox, reasons over each task with an LLM, and acts — with a persistent memory vault and human approval gates.',tags:['Python','LLM','Agents','Gemini'],repo:'digital-fte'},
+  {ic:'doc',title:'Foodservice Report Automation',desc:'Turns a raw POS export into a fully-built monthly report — Excel workbook plus a standalone HTML dashboard — in a single command.',tags:['Python','openpyxl','Excel COM','Automation'],live:'https://mto-gg-dashboard.vercel.app',repo:'mto-gg-report-automation'},
   {ic:'car',title:'Fleet Mileage & Reimbursement',desc:'Distance/mileage engine and gas-reimbursement workflow with fuzzy location matching, policy-locked flags and a human-in-the-loop HR approval console.',tags:['Python','Automation','HR Ops','HTML'],live:'https://fleet-mileage-demo.vercel.app',repo:'fleet-mileage-dashboard'},
-  {ic:'bot',title:'Digital FTE — AI Employee Agent',desc:'An autonomous "digital full-time employee": watches an inbox, reasons over each task with an LLM, and acts — with a persistent memory vault and approval gates.',tags:['Python','LLM','Agents','Gemini'],repo:'digital-fte'},
+  {ic:'cash',title:'AI Payroll System',desc:'Multi-entity payroll automation — an HR dashboard, an upload/processing app, and an email agent with a human-in-the-loop approval flow.',tags:['Python','Streamlit','pandas','HR'],repo:'ai-payroll-system'},
+  {ic:'chart',title:'Business Report Automation System',desc:'End-to-end reporting pipeline that ingests source data and produces a polished, interactive management dashboard automatically.',tags:['Automation','Dashboards','Data'],live:'https://report-automation-dashboard.vercel.app',repo:'report-automation-system'},
+  {ic:'chart',title:'PDI Analytics Portal',desc:'Client-side analytics portal — upload an Excel export and instantly get charts, KPIs and insights, all processed in the browser.',tags:['SheetJS','Chart.js','Analytics'],live:'https://pdi-analytics-portal.vercel.app',repo:'pdi-analytics-portal'},
   {ic:'fuel',title:'Fuel Pricing Agent',desc:'Reads daily vendor price-report exports, maps them to terminals, applies pricing rules, and generates an Excel tracker plus an HTML price app automatically.',tags:['Python','Data Pipeline','openpyxl'],repo:'fuel-pricing-agent'},
-  {ic:'cash',title:'AI Payroll System',desc:'Multi-entity payroll automation — an HR dashboard, an upload/processing app, and an email agent with a human-in-the-loop approval flow.',tags:['Python','Streamlit','pandas','HR'],repo:'ai-payroll-system'}
+  {ic:'fuel',title:'Fuel Pricing App',desc:'A clean web app that surfaces daily fuel-price comparisons across suppliers in a fast, readable interface.',tags:['Web App','Pricing','Data Viz'],live:'https://lonestarfuelpriceapp.vercel.app',repo:'lonestar-fuel-pricing'},
+  {ic:'car',title:'Distance Calculator',desc:'Generates driving-distance matrices between company sites and destinations, exported to a ready-to-use interactive calculator.',tags:['Geocoding','Routing','HTML'],live:'https://slpdistancecalculatorgenerate.vercel.app',repo:'slp-distance-calculator'},
+  {ic:'chart',title:'Strategic Planning Dashboard',desc:'An executive planning dashboard visualizing initiatives, warehouses and supply routes for data-driven strategy decisions.',tags:['Dashboard','Strategy','Data Viz'],live:'https://nextgen-planning.vercel.app',repo:'nextgen-strategic-dashboard'},
+  {ic:'doc',title:'Executive Dashboard (FastAPI + Docker)',desc:'A containerized full-stack app: a FastAPI backend that parses uploaded workbooks and a frontend that renders an executive summary view.',tags:['FastAPI','Docker','Full-stack'],repo:'executive-report-app'}
 ];
 const more=[
-  {t:'Executive Report App (FastAPI + Docker)',r:'executive-report-app'},
   {t:'PDF → Excel Payroll Extractor',r:'pdf-to-excel-extractor'},
-  {t:'PDI Analytics Portal',r:'pdi-analytics-portal'},
-  {t:'Strategic Planning Dashboard',r:'nextgen-strategic-dashboard'},
-  {t:'Fuel Pricing App',r:'lonestar-fuel-pricing'},
-  {t:'Distance Calculator',r:'slp-distance-calculator'},
-  {t:'Gemini Chatbot',r:'gemini-chatbot'},
-  {t:'Python OOP — Exercises Series',r:'python-oop-inheritance'}
+  {t:'Gemini Chatbot (async LLM)',r:'gemini-chatbot'},
+  {t:'Gemini API Starter',r:'gemini-api-starter'},
+  {t:'Personal Library Manager',r:'personal-library-manager'},
+  {t:'Password Strength Meter',r:'password-strength-meter'},
+  {t:'Number Guessing Game',r:'number-guessing-game'},
+  {t:'Temperature Converter',r:'temperature-converter'},
+  {t:'Python OOP — Full Exercise Series',r:'python-oop-inheritance'}
 ];
 const skills=[
   {h:'Languages',items:['Python','JavaScript','SQL','HTML/CSS']},
