@@ -195,6 +195,59 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:13.5px;text-align:center
 .post .links{margin-top:auto}
 .skip{position:absolute;left:-9999px;top:8px;z-index:99;background:var(--brand);color:#04201d;padding:8px 14px;border-radius:8px;font-weight:800}
 .skip:focus{left:12px}
+
+/* v2.3 epoxy */
+/* tighter spacing everywhere */
+section{padding:40px 0}
+.sub{margin-bottom:18px}
+h2.title{margin:4px 0 4px}
+.hero-inner{padding:34px 0 22px}
+.gh-banner + .hero .hero-inner{padding-top:22px}
+.grid,.posts,.skills,.play{gap:14px}
+.steps{gap:12px}
+.stats{gap:12px}
+.filters{margin-bottom:14px}
+
+/* 3D epoxy crystal-clear project cards */
+#projects .grid{perspective:1200px}
+#projects .card{position:relative;overflow:hidden;border-radius:20px;transform-style:preserve-3d;
+  will-change:transform;transition:transform .18s ease, box-shadow .25s ease;
+  background:
+    linear-gradient(160deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,.03) 38%,rgba(255,255,255,0) 60%),
+    linear-gradient(165deg,#15414d 0%,#0b2a33 48%,#061a20 100%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.35), inset 0 -10px 24px rgba(0,0,0,.35),
+             0 22px 44px rgba(0,0,0,.45), 0 4px 10px rgba(0,0,0,.30)}
+#projects .card::before{content:"";position:absolute;left:-10%;right:-10%;top:-38%;height:72%;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 100%,rgba(255,255,255,.18),rgba(255,255,255,.04) 55%,transparent 70%);
+  transform:translateZ(1px)}
+#projects .card::after{content:"";position:absolute;left:12%;right:12%;bottom:0;height:2px;pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(45,212,191,.85),transparent);filter:blur(.4px)}
+#projects .card > *{position:relative;z-index:1}
+#projects .card h3{color:#fff;text-shadow:0 1px 2px rgba(0,0,0,.45)}
+#projects .card p{color:#d6e6ea}
+#projects .card .tag{background:rgba(255,255,255,.08);color:#bfe3ea;border:1px solid rgba(255,255,255,.10)}
+#projects .card .tag.ok{color:#5eead4}
+#projects .card .btn{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:#fff;backdrop-filter:blur(4px)}
+#projects .card .btn:hover{border-color:#2dd4bf;color:#2dd4bf}
+#projects .card div[style*="--muted"]{color:#9fc6cf!important}
+#projects .card:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.45), inset 0 -10px 24px rgba(0,0,0,.35),
+             0 30px 60px rgba(0,0,0,.55), 0 0 0 1px rgba(45,212,191,.35)}
+/* light theme: clear crystal */
+:root[data-theme="light"] #projects .card{
+  background:
+    linear-gradient(160deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.55) 40%,rgba(255,255,255,.25) 100%),
+    linear-gradient(165deg,#e6f6f8 0%,#d4eef2 55%,#c2e4ea 100%);
+  border:1px solid rgba(13,148,136,.25);
+  box-shadow:inset 0 1px 0 #fff, inset 0 -10px 22px rgba(13,90,110,.10), 0 22px 44px rgba(15,39,60,.16), 0 4px 10px rgba(15,39,60,.10)}
+:root[data-theme="light"] #projects .card h3{color:#0f273c;text-shadow:none}
+:root[data-theme="light"] #projects .card p{color:#334155}
+:root[data-theme="light"] #projects .card .tag{background:rgba(255,255,255,.7);color:#0f4f59;border-color:rgba(13,148,136,.2)}
+:root[data-theme="light"] #projects .card .tag.ok{color:#0d9488}
+:root[data-theme="light"] #projects .card .btn{background:rgba(255,255,255,.75);border-color:rgba(13,148,136,.3);color:#0f273c}
+:root[data-theme="light"] #projects .card div[style*="--muted"]{color:#4b6b74!important}
+@media (prefers-reduced-motion:reduce){#projects .card{transition:none}}
+@media print{#projects .card{transform:none!important;box-shadow:none!important}}
 </style>
 </head>
 <body>
@@ -532,6 +585,17 @@ var FLOW = {
     const step = t => { const k = Math.min(1,(t-t0)/900); el.textContent = Math.round(end*k*(2-k)); if(k<1) requestAnimationFrame(step); };
     requestAnimationFrame(step); }), {threshold:.4});
   els.forEach(e => io.observe(e));
+})();
+
+// v2.3: gentle 3D tilt on project cards (pointer devices only, respects reduced motion)
+(function(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches || !matchMedia("(hover: hover)").matches) return;
+  const grid = document.getElementById("grid");
+  grid.addEventListener("pointermove", e => { const c = e.target.closest(".card"); if(!c) return;
+    const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+    c.style.transform = `rotateX(${(-y*6).toFixed(2)}deg) rotateY(${(x*8).toFixed(2)}deg) translateZ(6px)`; });
+  grid.addEventListener("pointerout", e => { const c = e.target.closest(".card");
+    if(c && !c.contains(e.relatedTarget)) c.style.transform = ""; });
 })();
 </script>
 </body>
