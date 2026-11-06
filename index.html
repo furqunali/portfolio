@@ -3,309 +3,399 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Furqan Ali — Senior AI Engineer</title>
-<meta name="description" content="Furqan Ali — Senior AI Engineer. Building production multi-agent systems (CrewAI, LangGraph), Digital FTEs, RAG pipelines and enterprise automation that ship real results.">
+<title>Furqan Ali — Senior AI Engineer · Forward Deployed Engineer</title>
+<meta name="description" content="Furqan Ali — Senior AI Engineer and Forward Deployed Engineer. Production AI agents, multi-agent systems (CrewAI, LangGraph), RAG, MCP and computer vision for finance and operations. 15+ years of enterprise finance experience.">
+<meta property="og:title" content="Furqan Ali — Senior AI Engineer · Forward Deployed Engineer">
+<meta property="og:description" content="Production AI agents, RAG, MCP and computer vision for finance and operations — 906 automated tests across the flagship projects, live demos on Hugging Face.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://furqan-ali-portfolio-dun.vercel.app">
+<meta property="og:image" content="https://furqan-ali-portfolio-dun.vercel.app/icon.png">
+<meta name="theme-color" content="#0a1120">
 <link rel="icon" type="image/png" href="/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Furqan Ali",
+ "jobTitle":"Senior AI Engineer · Forward Deployed Engineer",
+ "worksFor":{"@type":"Organization","name":"Sugarland Petroleum, Inc."},
+ "address":{"@type":"PostalAddress","addressLocality":"Karachi","addressCountry":"PK"},
+ "email":"mailto:furqanali2628@gmail.com","url":"https://furqan-ali-portfolio-dun.vercel.app",
+ "sameAs":["https://github.com/furqunali","https://www.linkedin.com/in/furqan-ali-08b030255","https://huggingface.co/FurqanAli12345"],
+ "knowsAbout":["Agentic AI","Multi-Agent Systems","CrewAI","LangGraph","Retrieval-Augmented Generation","Model Context Protocol","Computer Vision","MLOps","Python","FastAPI","Node.js"]}
+</script>
 <style>
 :root{
   --bg:#f6f8fb; --surface:#ffffff; --surface-2:#eef2f7; --border:#e2e8f0;
   --ink:#0f273c; --ink-2:#334155; --muted:#64748b;
-  --brand:#0d9488; --brand-2:#0f766e; --navy:#0f273c; --accent:#4f46e5;
+  --brand:#0d9488; --brand-2:#0f766e; --accent:#4f46e5; --gold:#b7892b;
   --shadow:0 8px 30px rgba(15,39,60,.08);
   --grad:linear-gradient(120deg,#0f273c,#13324e 55%,#0d9488);
 }
 :root[data-theme="dark"]{
   --bg:#0a1120; --surface:#0f1b2e; --surface-2:#13233a; --border:#22364f;
   --ink:#e6edf5; --ink-2:#c2cede; --muted:#8ea3bd;
-  --brand:#2dd4bf; --brand-2:#14b8a6; --navy:#0a1120; --accent:#818cf8;
+  --brand:#2dd4bf; --brand-2:#14b8a6; --accent:#818cf8; --gold:#e8c26a;
   --shadow:0 10px 34px rgba(0,0,0,.45);
   --grad:linear-gradient(120deg,#0a1120,#0f2740 55%,#0d9488);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);
-  font-family:'Inter',system-ui,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,'Segoe UI',sans-serif;
+  -webkit-font-smoothing:antialiased;line-height:1.6}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-section{padding:64px 0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:68px 0}
 .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand)}
 h2.title{font-size:30px;font-weight:800;margin:8px 0 6px;letter-spacing:-.02em}
-.section-sub{color:var(--muted);max-width:60ch;margin:0 0 30px}
+.sub{color:var(--muted);max-width:66ch;margin:0 0 28px}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:6px}
 
-/* Header */
+/* header */
 header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
-  background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--border)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+  background:color-mix(in srgb,var(--bg) 84%,transparent);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800}
-.brand .mono{width:34px;height:34px;border-radius:9px;background:var(--grad);color:#fff;
-  display:grid;place-items:center;font-size:14px;font-weight:900;letter-spacing:.02em}
-.navlinks{display:flex;gap:22px;align-items:center}
+.brand img{width:34px;height:34px;border-radius:9px}
+.navlinks{display:flex;gap:20px;align-items:center}
 .navlinks a{font-size:14px;font-weight:600;color:var(--ink-2)}
 .navlinks a:hover{color:var(--brand)}
-.icon-btn{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;
-  border:1px solid var(--border);background:var(--surface);cursor:pointer;color:var(--ink)}
+.icon-btn{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;border:1px solid var(--border);
+  background:var(--surface);cursor:pointer;color:var(--ink)}
 .icon-btn:hover{border-color:var(--brand);color:var(--brand)}
-@media(max-width:720px){.navlinks a:not(.cta){display:none}}
+@media(max-width:820px){.navlinks a:not(.cta){display:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;font-weight:700;font-size:14.5px;
+  border:1px solid var(--border);background:var(--surface);color:var(--ink);cursor:pointer;transition:.15s}
+.btn:hover{border-color:var(--brand);transform:translateY(-1px)}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#04201d}
+.btn.small{padding:7px 12px;font-size:13px;border-radius:10px}
 
-/* Hero */
+/* hero */
 .hero{position:relative;overflow:hidden}
-.hero-inner{display:grid;grid-template-columns:1.4fr .9fr;gap:40px;align-items:center;padding:70px 0 40px}
-.hero h1{font-size:52px;line-height:1.03;font-weight:900;letter-spacing:-.03em;margin:14px 0 10px}
-.hero h1 .grad{background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .role{font-size:19px;font-weight:600;color:var(--ink-2)}
-.hero p.lead{color:var(--muted);font-size:16px;margin:18px 0 26px;max-width:52ch}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;border-radius:11px;font-weight:700;font-size:14.5px;
-  border:1px solid var(--border);background:var(--surface);color:var(--ink);transition:.15s;cursor:pointer}
-.btn:hover{transform:translateY(-1px);border-color:var(--brand)}
-.btn.primary{background:var(--grad);color:#fff;border:none;box-shadow:var(--shadow)}
-.btn.primary:hover{filter:brightness(1.06)}
-.btn svg{width:17px;height:17px}
-.hero-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
-.hero-card h3{margin:0 0 14px;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
-.stat{display:flex;align-items:baseline;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--border)}
-.stat:last-child{border-bottom:none}
-.stat b{font-size:26px;font-weight:900;color:var(--brand)}
-.stat span{color:var(--muted);font-size:14px}
-@media(max-width:820px){.hero-inner{grid-template-columns:1fr;gap:26px}.hero h1{font-size:40px}}
+.hero::before{content:"";position:absolute;inset:-30% -10% auto auto;width:620px;height:620px;border-radius:50%;
+  background:radial-gradient(closest-side,color-mix(in srgb,var(--brand) 22%,transparent),transparent);pointer-events:none}
+.hero-inner{display:grid;grid-template-columns:1.45fr .85fr;gap:40px;align-items:center;padding:64px 0 34px;position:relative}
+.hero h1{font-size:50px;line-height:1.04;font-weight:900;letter-spacing:-.03em;margin:12px 0 10px}
+.hero h1 .role{display:block;font-size:24px;letter-spacing:-.01em;margin-top:10px;color:var(--brand);font-weight:800}
+.hero p.lead{font-size:17.5px;color:var(--ink-2);max-width:60ch}
+.badge-row{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px}
+.pill{display:inline-block;font-size:12.5px;font-weight:700;padding:5px 11px;border-radius:999px;
+  background:var(--surface-2);border:1px solid var(--border);color:var(--ink-2)}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px}
+.avatar-card{background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:24px;box-shadow:var(--shadow);text-align:center}
+.avatar-card img{width:150px;height:150px;border-radius:28px;display:block;margin:0 auto 12px}
+.avail{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--brand)}
+.avail i{width:9px;height:9px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 0 var(--brand);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--brand) 60%,transparent)}100%{box-shadow:0 0 0 12px transparent}}
+@media(max-width:860px){.hero-inner{grid-template-columns:1fr}.hero h1{font-size:38px}}
 
-/* Chips */
-.chips{display:flex;flex-wrap:wrap;gap:9px}
-.chip{padding:7px 13px;border-radius:999px;background:var(--surface-2);border:1px solid var(--border);
-  font-size:13px;font-weight:600;color:var(--ink-2)}
-.skillgroup{margin-bottom:22px}
-.skillgroup h4{margin:0 0 11px;font-size:14px;color:var(--muted);font-weight:700;display:flex;align-items:center;gap:8px}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:10px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px 18px;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:28px;font-weight:900;letter-spacing:-.02em;color:var(--ink)}
+.stat span{font-size:12.5px;color:var(--muted);font-weight:600}
+@media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
 
-/* Alternating section surface */
-.alt{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px;position:relative}
+.step::before{counter-increment:s;content:"0" counter(s);font-weight:900;font-size:13px;color:var(--brand);letter-spacing:.08em}
+.step h3{margin:6px 0 6px;font-size:16.5px}.step p{margin:0;color:var(--muted);font-size:14px}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
 
-/* Project cards */
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-@media(max-width:760px){.grid{grid-template-columns:1fr}}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px;display:flex;flex-direction:column;
-  transition:.16s;box-shadow:0 1px 2px rgba(0,0,0,.04)}
-.card:hover{transform:translateY(-3px);border-color:var(--brand);box-shadow:var(--shadow)}
-.card .top{display:flex;align-items:center;gap:11px;margin-bottom:9px}
-.card .ic{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;flex:none;
-  background:color-mix(in srgb,var(--brand) 15%,transparent);color:var(--brand)}
-.card h3{margin:0;font-size:17px;font-weight:800;letter-spacing:-.01em}
-.badge-live{margin-left:auto;font-size:11px;font-weight:800;letter-spacing:.04em;color:#059669;
-  background:color-mix(in srgb,#059669 16%,transparent);padding:4px 9px;border-radius:999px;text-transform:uppercase}
-.card p{color:var(--muted);font-size:14px;margin:4px 0 14px;flex:1}
-.card .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:15px}
-.card .tags span{font-size:11.5px;font-weight:600;color:var(--ink-2);background:var(--surface-2);padding:3px 9px;border-radius:6px}
-.card .links{display:flex;gap:10px}
-.card .links a{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--brand)}
-.card .links a.muted{color:var(--muted)}
-.card .links a:hover{color:var(--accent)}
-.card .links svg{width:15px;height:15px}
+/* projects */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.chip{font:inherit;font-size:13.5px;font-weight:700;padding:7px 14px;border-radius:999px;border:1px solid var(--border);
+  background:var(--surface);color:var(--ink-2);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#04201d}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:820px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;gap:10px;transition:.18s}
+.card:hover{border-color:color-mix(in srgb,var(--brand) 55%,var(--border));transform:translateY(-2px)}
+.card h3{margin:0;font-size:18.5px;letter-spacing:-.01em}
+.card .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.flag{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.card p{margin:0;color:var(--ink-2);font-size:14.5px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:7px;background:var(--surface-2);color:var(--muted)}
+.tag.ok{color:var(--brand)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
+.hidden{display:none!important}
 
-/* More list */
-.morelist{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-@media(max-width:640px){.morelist{grid-template-columns:1fr}}
-.morelist a{display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid var(--border);
-  border-radius:11px;background:var(--surface);font-weight:600;font-size:14px;transition:.14s}
-.morelist a:hover{border-color:var(--brand);color:var(--brand);transform:translateX(2px)}
-.morelist a .dot{width:8px;height:8px;border-radius:50%;background:var(--brand);flex:none}
+/* modal */
+dialog{border:1px solid var(--border);border-radius:20px;background:var(--surface);color:var(--ink);
+  max-width:720px;width:calc(100% - 32px);padding:0;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+dialog::backdrop{background:rgba(5,10,20,.65);backdrop-filter:blur(3px)}
+.m-head{padding:22px 24px;background:var(--grad);color:#fff}
+.m-head h3{margin:0;font-size:21px}.m-head p{margin:4px 0 0;opacity:.9;font-size:14px}
+.m-body{padding:20px 24px 24px}
+.m-body h4{margin:16px 0 6px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--brand)}
+.m-body ul{margin:0;padding-left:20px;color:var(--ink-2)}.m-body li{margin:3px 0}
+.m-close{float:right;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;line-height:1}
 
-/* Contact */
-.contact-box{background:var(--grad);color:#fff;border-radius:20px;padding:40px;text-align:center;box-shadow:var(--shadow)}
-.contact-box h2{font-size:28px;font-weight:900;margin:0 0 8px}
-.contact-box p{color:#d7e6ef;margin:0 auto 22px;max-width:46ch}
-.contact-box .cta-row{justify-content:center}
-.contact-box .btn{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);color:#fff}
-.contact-box .btn.primary{background:#fff;color:var(--navy)}
-footer{padding:34px 0;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--border)}
+/* skills, timeline */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.skills{grid-template-columns:1fr}}
+.skill{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px}
+.skill h3{margin:0 0 10px;font-size:15.5px}
+.tl{position:relative;margin-left:8px;border-left:2px solid var(--border)}
+.tl-item{position:relative;padding:0 0 26px 26px}
+.tl-item::before{content:"";position:absolute;left:-8px;top:5px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--brand)}
+.tl-item h3{margin:0;font-size:17px}.tl-item .meta{font-size:13.5px;color:var(--muted);font-weight:600}
+.tl-item ul{margin:8px 0 0;padding-left:18px;color:var(--ink-2);font-size:14.5px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:820px){.two{grid-template-columns:1fr}}
+.list{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px}
+.list h3{margin:0 0 10px;font-size:16px}.list ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:14.5px}
+
+/* contact */
+.contact{background:var(--grad);color:#fff;border-radius:24px;padding:38px;display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center}
+.contact h2{margin:0 0 8px;font-size:30px}.contact p{margin:0;opacity:.9}
+.contact .btn{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.25);color:#fff}
+.contact .btn.primary{background:#2dd4bf;border-color:#2dd4bf;color:#04201d}
+.c-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+@media(max-width:820px){.contact{grid-template-columns:1fr}.c-links{justify-content:flex-start}}
+footer{padding:30px 0 40px;color:var(--muted);font-size:13.5px;text-align:center}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);
+  padding:10px 16px;border-radius:10px;font-weight:700;font-size:14px;opacity:0;transition:.2s;pointer-events:none}
+.toast.on{opacity:1}
+@media print{header,.filters,.cta-row,.links,.c-links,.icon-btn{display:none!important}section{padding:20px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top"><img class="mono" src="/icon.png" width="34" height="34" alt="AI" /> Furqan Ali</a>
-    <nav class="navlinks">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle theme"></button>
-    </nav>
-  </div>
-</header>
+<header><div class="wrap nav">
+  <a class="brand" href="#top"><img src="/brain.svg" alt="" width="34" height="34">Furqan Ali</a>
+  <nav class="navlinks" aria-label="Main">
+    <a href="#how">How I work</a><a href="#projects">Projects</a><a href="#skills">Skills</a>
+    <a href="#experience">Experience</a><a class="btn small primary cta" href="#contact">Contact</a>
+    <button class="icon-btn" id="theme" aria-label="Toggle light / dark theme" title="Toggle theme">◐</button>
+  </nav>
+</div></header>
 
-<a id="top"></a>
-<section class="hero">
-  <div class="wrap hero-inner">
+<main id="top">
+<section class="hero"><div class="wrap">
+  <div class="hero-inner">
     <div>
-      <span class="eyebrow">⚡ Agentic AI &amp; Intelligent Automation</span>
-      <h1>Building <span class="grad">AI agents</span> &amp; automation that ship results.</h1>
-      <div class="role">Furqan Ali — Senior AI Engineer</div>
-      <p class="lead">I design and deploy production <b>multi-agent systems</b> (CrewAI, LangGraph), <b>Digital FTEs</b>,
-      RAG pipelines and analytics dashboards — turning slow manual workflows into reliable, self-running systems
-      for enterprise operations, backed by 15+ years in finance &amp; operations.</p>
-      <div class="cta-row">
-        <a class="btn primary" href="#projects">View Projects
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn" href="https://github.com/furqunali" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.8 9.6.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .8.1-.6.3-1.1.6-1.4-2.2-.3-4.5-1.1-4.5-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.5 5 .3.3.6.9.6 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 22 12.2C22 6.6 17.5 2 12 2z"/></svg>
-          GitHub</a>
-        <a class="btn" href="https://linkedin.com/in/furqan-ali-08b030255" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.6h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21H21v-5.3c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21H13z"/></svg>
-          LinkedIn</a>
+      <span class="eyebrow">Production AI for finance &amp; operations</span>
+      <h1>Furqan Ali<span class="role">Senior AI Engineer · Forward Deployed Engineer</span></h1>
+      <p class="lead">I embed with finance and operations teams, find the workflows that cost the most time and money,
+        and ship <b>production AI that runs them</b> — multi-agent systems, RAG, MCP-connected agents and computer vision —
+        with human approval, audit trails and evaluations built in. <b>15+ years in enterprise finance &amp; operations</b>
+        means I start from the business problem and prove the numbers before anything goes live.</p>
+      <div class="badge-row">
+        <span class="pill">Agentic AI</span><span class="pill">CrewAI · LangGraph</span><span class="pill">RAG</span>
+        <span class="pill">MCP</span><span class="pill">Computer Vision</span><span class="pill">LLM Evaluation</span><span class="pill">MLOps</span>
       </div>
-    </div>
-    <div class="hero-card">
-      <h3>At a glance</h3>
-      <div class="stat"><span>Live web app demos</span><b>9</b></div>
-      <div class="stat"><span>Flagship projects</span><b>7</b></div>
-      <div class="stat"><span>Focus</span><b style="font-size:15px">Agentic AI</b></div>
-      <div class="stat"><span>Core stack</span><b style="font-size:15px">Python · CrewAI</b></div>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="wrap">
-    <span class="eyebrow">🚀 Selected work</span>
-    <h2 class="title">Featured Projects</h2>
-    <p class="section-sub">Real systems I designed, built and deployed — AI agents, analytics dashboards,
-    and end-to-end automation. Live demos use fully anonymized sample data.</p>
-    <div class="grid" id="featured"></div>
-  </div>
-</section>
-
-<section class="alt" id="skills">
-  <div class="wrap">
-    <span class="eyebrow">🧰 Toolbox</span>
-    <h2 class="title">Skills &amp; Technologies</h2>
-    <p class="section-sub">The stack I use to take ideas from prototype to production.</p>
-    <div id="skills-list"></div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap" style="max-width:760px">
-    <span class="eyebrow">👋 Profile</span>
-    <h2 class="title">About</h2>
-    <p style="color:var(--ink-2);font-size:16.5px">I'm a <b>Senior AI Engineer</b> focused on
-    intelligent, self-running systems for enterprise operations. My work spans <b>multi-agent systems</b>
-    (CrewAI, LangGraph) and <b>Digital FTEs</b> (task intake → reasoning → action, with human-in-the-loop
-    approval), <b>RAG</b> and <b>data dashboards</b> that turn raw spreadsheets into executive insight, and
-    <b>process automation</b> that replaces hours of manual work with a single command — backed by 15+ years
-    in finance &amp; operations, which is my edge in knowing <i>which</i> processes are worth automating.</p>
-    <p style="color:var(--muted)">I care about shipping — every project here is a working system, documented,
-    tested, and deployed. I follow strong engineering hygiene: secrets in environment variables, clean git
-    history, sanitized public demos, and readable, maintainable code.</p>
-    <div class="morelist" style="margin-top:22px">
-      <a href="https://github.com/furqunali" target="_blank" rel="noopener"><span class="dot"></span>All repositories on GitHub</a>
-      <a href="https://linkedin.com/in/furqan-ali-08b030255" target="_blank" rel="noopener"><span class="dot"></span>Connect on LinkedIn</a>
-    </div>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="wrap">
-    <span class="eyebrow">📦 More on GitHub</span>
-    <h2 class="title">Additional Projects &amp; Practice</h2>
-    <p class="section-sub">A selection of other shipped tools and fundamentals repositories.</p>
-    <div class="morelist" id="more"></div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <div class="contact-box">
-      <h2>🤝 Let's build something intelligent.</h2>
-      <p>Open to Senior AI Engineering, Agentic AI, GenAI, RAG and enterprise automation roles. Reach out — I'd love to talk.</p>
       <div class="cta-row">
-        <a class="btn primary" href="mailto:furqanali2628@gmail.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-          Email me</a>
-        <a class="btn" href="https://linkedin.com/in/furqan-ali-08b030255" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn primary" href="#projects">View projects →</a>
+        <a class="btn" href="https://huggingface.co/collections/FurqanAli12345/ai-engineering-portfolio-furqan-ali-6aee23309106bbd0f76f060b" target="_blank" rel="noopener">🤗 Try live demos</a>
         <a class="btn" href="https://github.com/furqunali" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
+    <div class="avatar-card">
+      <img src="/icon.png" alt="Furqan Ali AI brain logo" width="150" height="150">
+      <div style="font-weight:800;font-size:18px">Furqan Ali</div>
+      <div style="color:var(--muted);font-size:14px">Sugarland Petroleum, Inc. · Remote</div>
+      <div style="color:var(--muted);font-size:14px;margin-bottom:10px">Karachi, Pakistan</div>
+      <span class="avail"><i></i>Open to remote &amp; relocation</span>
+    </div>
   </div>
-</section>
+  <div class="stats" aria-label="Proof points">
+    <div class="stat"><b data-count="906">906</b><span>automated tests across flagship projects</span></div>
+    <div class="stat"><b data-count="7">7</b><span>live AI demos on Hugging Face</span></div>
+    <div class="stat"><b>0</b><span>false approvals · 1,000-case benchmark</span></div>
+    <div class="stat"><b>50–60%</b><span>less manual processing in back-office ops</span></div>
+    <div class="stat"><b id="ghRepos">50+</b><span>public repositories <small id="ghLive"></small></span></div>
+  </div>
+</div></section>
 
-<footer><div class="wrap">© 2026 Furqan Ali · Senior AI Engineer · Built and deployed by hand.</div></footer>
+<section id="how"><div class="wrap">
+  <span class="eyebrow">Forward Deployed Engineering</span>
+  <h2 class="title">How I work</h2>
+  <p class="sub">The same loop on every engagement — from a business problem to a measured, trusted production system.</p>
+  <div class="steps">
+    <div class="step"><h3>Discover</h3><p>Sit with the team, map the workflow, find where time and money leak — and how the result will be measured.</p></div>
+    <div class="step"><h3>Prototype</h3><p>A working prototype in days on real (sanitised) data, so the business sees value before big investment.</p></div>
+    <div class="step"><h3>Harden</h3><p>Guardrails, human approval, audit trail, tests + CI, evaluations, observability and secure deployment.</p></div>
+    <div class="step"><h3>Prove &amp; scale</h3><p>Reconcile every output against the source, measure impact, document and hand over — then scale.</p></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <span class="eyebrow">Selected work</span>
+  <h2 class="title">Projects</h2>
+  <p class="sub">Production-minded AI systems with tests, CI and live demos. Click a project for the case study. All demos use synthetic or anonymised data.</p>
+  <div class="filters" role="group" aria-label="Filter projects" id="filters"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <span class="eyebrow">Toolkit</span>
+  <h2 class="title">Skills</h2>
+  <div class="skills">
+    <div class="skill"><h3>AI &amp; Agents</h3><div class="tags">
+      <span class="tag">Generative AI &amp; LLMs</span><span class="tag">Multi-Agent Systems</span><span class="tag">CrewAI</span><span class="tag">LangGraph</span>
+      <span class="tag">MCP</span><span class="tag">OpenAI Agents SDK</span><span class="tag">RAG &amp; Embeddings</span><span class="tag">pgvector</span>
+      <span class="tag">Prompt Engineering</span><span class="tag">Gemini · Vertex AI</span><span class="tag">Copilot Studio</span><span class="tag">Computer Vision &amp; OCR</span></div></div>
+    <div class="skill"><h3>Engineering &amp; MLOps</h3><div class="tags">
+      <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Node.js</span><span class="tag">JavaScript</span><span class="tag">REST APIs</span>
+      <span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">GitHub Actions</span><span class="tag">pytest</span>
+      <span class="tag">Prometheus · OpenTelemetry</span><span class="tag">Evaluation-Driven Development</span></div></div>
+    <div class="skill"><h3>Trust, Business &amp; Delivery</h3><div class="tags">
+      <span class="tag">Human-in-the-Loop</span><span class="tag">OWASP LLM Top 10</span><span class="tag">AI transparency</span><span class="tag">Data reconciliation</span>
+      <span class="tag">Excel &amp; report automation</span><span class="tag">Dashboards &amp; analytics</span><span class="tag">Finance &amp; operations</span><span class="tag">SAP BTP · Power Automate</span></div></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <span class="eyebrow">Career</span>
+  <h2 class="title">Experience</h2>
+  <div class="tl">
+    <div class="tl-item"><h3>Senior AI Engineer</h3><div class="meta">Sugarland Petroleum, Inc., Houston, TX, USA (Remote from Karachi, Pakistan) · Nov 2023 – Present</div>
+      <ul><li>Design, build and deploy AI agents, RAG systems and LLM microservices (Python, FastAPI, Docker, Kubernetes).</li>
+          <li>Automated recurring finance and operations reporting; cut manual data entry and reconciliation by ~50%.</li>
+          <li>Weekly sales dashboard for a 13-site restaurant chain with one-click refresh, checked by 6,900+ automated reconciliation tests.</li>
+          <li>LLM document tools that turn vendor invoices into import-ready pricebook files; fuel-pricing and vendor pipelines ($10M+ annual volume).</li></ul></div>
+    <div class="tl-item"><h3>Accounts Receivable &amp; Marketing Manager</h3><div class="meta">Crown Developers and Marketing Pvt Ltd, Karachi, Pakistan · Oct 2018 – Oct 2023</div>
+      <ul><li>Directed financial reporting, budgeting and reconciliation; supervised the accounting team and shortened month-end close.</li></ul></div>
+    <div class="tl-item"><h3>Senior Accountant</h3><div class="meta">Federal Hospital &amp; Enterprise Organizations, Karachi, Pakistan · Jul 2013 – Jan 2018</div>
+      <ul><li>Automated monthly reconciliation, saving 40+ hours per month with zero audit discrepancies over 4+ years.</li></ul></div>
+    <div class="tl-item"><h3>Accountant</h3><div class="meta">Muller &amp; Phipps Pakistan (Private) Limited, Karachi, Pakistan · Sep 2010 – Oct 2012</div>
+      <ul><li>General ledger, reconciliations and invoice processing for high-volume distribution operations.</li></ul></div>
+  </div>
+  <div class="two" style="margin-top:10px">
+    <div class="list"><h3>🎓 Certifications &amp; Training</h3><ul>
+      <li>Responsible AI for Developers: Fairness &amp; Bias — Google Cloud (2025)</li>
+      <li>MLOps with Vertex AI: Model Evaluation for Generative AI — Google Cloud (2025)</li>
+      <li>Copilot Studio Agents &amp; Power Automate Specialization — Microsoft Learn (2025)</li>
+      <li>IBM SkillsBuild AI Practitioner (Granite, Data Science &amp; LLMs) — IBM (2025)</li>
+      <li>Introduction to Generative AI and Agents — Microsoft Learn (2025)</li>
+      <li>Agent Factory: Production Digital FTEs — Panaversity (in progress)</li></ul></div>
+    <div class="list"><h3>🏛️ Education</h3><ul>
+      <li>M.Com in Accounting &amp; Finance — University of Karachi, Karachi, Pakistan (2009)</li>
+      <li>B.Com in Accounting &amp; Finance — University of Karachi, Karachi, Pakistan (2006)</li></ul></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="contact">
+    <div><h2>Let's build something that ships.</h2>
+      <p>Open to Senior AI Engineer, Forward Deployed Engineer, Agentic AI / GenAI, RAG and MLOps roles — remote or relocation.</p></div>
+    <div class="c-links">
+      <button class="btn primary" id="copyEmail">📧 furqanali2628@gmail.com</button>
+      <a class="btn" href="https://www.linkedin.com/in/furqan-ali-08b030255" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/furqunali" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://huggingface.co/FurqanAli12345" target="_blank" rel="noopener">🤗 Hugging Face</a>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer>© <span id="yr">2026</span> Furqan Ali · Senior AI Engineer · Forward Deployed Engineer · Karachi, Pakistan</footer>
+
+<dialog id="modal" aria-labelledby="mTitle"><div class="m-head"><button class="m-close" aria-label="Close" id="mClose">×</button>
+  <h3 id="mTitle"></h3><p id="mSub"></p></div><div class="m-body" id="mBody"></div></dialog>
+<div class="toast" id="toast" role="status"></div>
 
 <script>
-// ---- Theme ----
-const root=document.documentElement, tb=document.getElementById('themeBtn');
-const sun='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"/></svg>';
-const moon='<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.5 6.5 0 0 0 9.8 9.8z"/></svg>';
-function setTheme(t){root.setAttribute('data-theme',t);tb.innerHTML=t==='dark'?sun:moon;try{localStorage.setItem('theme',t)}catch(e){}}
-const qp=new URLSearchParams(location.search).get('theme');
-const saved=qp||(()=>{try{return localStorage.getItem('theme')}catch(e){return null}})();
-setTheme(saved|| (matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'));
-tb.onclick=()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark');
-
-// ---- Icons for cards ----
-const I={
-  chart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="6"/><rect x="12" y="7" width="3" height="10"/><rect x="17" y="13" width="3" height="4"/></svg>',
-  bot:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 8V4M8 14h.01M16 14h.01M2 13h2M20 13h2"/></svg>',
-  fuel:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="9" height="18" rx="2"/><path d="M13 8h3l2 2v6a2 2 0 0 1-4 0V9M7 7h3"/></svg>',
-  cash:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>',
-  car:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v5h-2v-2H7v2H5z"/><circle cx="8" cy="16" r="1"/><circle cx="16" cy="16" r="1"/></svg>',
-  doc:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>',
-  code:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg>',
-  ext:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
-  gh:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.8 9.6.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .8.1-.6.3-1.1.6-1.4-2.2-.3-4.5-1.1-4.5-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.3 9.3 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.5 5 .3.3.6.9.6 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 22 12.2C22 6.6 17.5 2 12 2z"/></svg>'
-};
-
-const featured=[
-  {ic:'bot',title:'Agentic Finance Crew',desc:'A multi-agent expense-approval crew — Intake → Policy Analyst → Approving Manager — with a deterministic policy guardrail and human-in-the-loop escalation. Pluggable CrewAI / LangGraph engines behind one interface; containerized and Kubernetes-ready.',tags:['CrewAI','LangGraph','FastAPI','Docker','Kubernetes'],live:'https://agentic-finance-crew-deploy.vercel.app',repo:'agentic-finance-crew'},
-  {ic:'chart',title:'Food & Sales Budget Variance',desc:'Monthly 4-store foodservice budget-vs-actual report — a verified Excel workbook plus an executive HTML dashboard (margins, sales, customer counts, kitchen mix), built in one command with an automated anomaly and 3-month-trend flagging pass.',tags:['Python','openpyxl','Excel COM','Dashboards'],live:'https://food-sales-variance-automation.vercel.app',repo:'food-sales-variance-automation'},
-  {ic:'bot',title:'Digital FTE — AI Employee Agent',desc:'An autonomous "digital full-time employee": watches an inbox, reasons over each task with an LLM, and acts — with a persistent memory vault and human approval gates.',tags:['Python','LLM','Agents','Gemini'],repo:'digital-fte'},
-  {ic:'chart',title:'Enterprise Performance Tracker',desc:'A management dashboard for corporate goals, departmental KPIs and business-segment performance — with role-based views and live report submission.',tags:['React','Recharts','Dashboards','KPI'],live:'https://slp-performance-tracker.vercel.app',repo:'performance-tracker-dashboard'},
-  {ic:'doc',title:'AI-Native Applications Guide',desc:'A 13-chapter technical handbook with runnable examples covering LLMs, RAG, AI agents and MLOps — a practical reference for building production AI-native applications.',tags:['LLMs','RAG','Agents','MLOps'],repo:'AI-Native-Book'},
-  {ic:'chart',title:'Business Report Automation System',desc:'End-to-end reporting pipeline that ingests source data and produces a polished, interactive management dashboard automatically.',tags:['Automation','Dashboards','Data'],live:'https://report-automation-dashboard.vercel.app',repo:'report-automation-system'},
-  {ic:'doc',title:'Foodservice Report Automation',desc:'Turns a raw POS export into a fully-built monthly report — Excel workbook plus a standalone HTML dashboard — in a single command.',tags:['Python','openpyxl','Excel COM','Automation'],live:'https://mto-gg-dashboard.vercel.app',repo:'mto-gg-report-automation'},
-  {ic:'code',title:'OpsPilot — AI Agent Infrastructure',desc:'An agent framework that runs multi-step operational workflows through structured reasoning and tool use — a spec-driven foundation for building autonomous operations agents.',tags:['AI Agents','LLM','Orchestration'],repo:'ops-pilot-agent'},
-  {ic:'car',title:'Fleet Mileage & Reimbursement',desc:'Distance/mileage engine and gas-reimbursement workflow with fuzzy location matching, policy-locked flags and a human-in-the-loop HR approval console.',tags:['Python','Automation','HR Ops','HTML'],live:'https://fleet-mileage-demo.vercel.app',repo:'fleet-mileage-dashboard'},
-  {ic:'cash',title:'AI Payroll System',desc:'Multi-entity payroll automation — an HR dashboard, an upload/processing app, and an email agent with a human-in-the-loop approval flow.',tags:['Python','Streamlit','pandas','HR'],repo:'ai-payroll-system'},
-  {ic:'chart',title:'PDI Analytics Portal',desc:'Client-side analytics portal — upload an Excel export and instantly get charts, KPIs and insights, all processed in the browser.',tags:['SheetJS','Chart.js','Analytics'],live:'https://pdi-analytics-portal.vercel.app',repo:'pdi-analytics-portal'},
-  {ic:'fuel',title:'Fuel Pricing Agent',desc:'Reads daily vendor price-report exports, maps them to terminals, applies pricing rules, and generates an Excel tracker plus an HTML price app automatically.',tags:['Python','Data Pipeline','openpyxl'],repo:'fuel-pricing-agent'},
-  {ic:'fuel',title:'Fuel Pricing App',desc:'A clean web app that surfaces daily fuel-price comparisons across suppliers in a fast, readable interface.',tags:['Web App','Pricing','Data Viz'],live:'https://lonestarfuelpriceapp.vercel.app',repo:'lonestar-fuel-pricing'},
-  {ic:'car',title:'Distance Calculator',desc:'Generates driving-distance matrices between company sites and destinations, exported to a ready-to-use interactive calculator.',tags:['Geocoding','Routing','HTML'],live:'https://slpdistancecalculatorgenerate.vercel.app',repo:'slp-distance-calculator'},
-  {ic:'chart',title:'Strategic Planning Dashboard',desc:'An executive planning dashboard visualizing initiatives, warehouses and supply routes for data-driven strategy decisions.',tags:['Dashboard','Strategy','Data Viz'],live:'https://nextgen-planning.vercel.app',repo:'nextgen-strategic-dashboard'},
-  {ic:'doc',title:'Executive Dashboard (FastAPI + Docker)',desc:'A containerized full-stack app: a FastAPI backend that parses uploaded workbooks and a frontend that renders an executive summary view.',tags:['FastAPI','Docker','Full-stack'],repo:'executive-report-app'}
+const GH = "https://github.com/furqunali/", HF = "https://huggingface.co/spaces/FurqanAli12345/";
+const P = [
+ {n:"Agentic Finance Crew", s:"Multi-agent expense approver", cat:["agentic","oss"], flag:"Flagship",
+  d:"Intake, analyst and approver agents with a deterministic policy guardrail and human review — CrewAI / LangGraph engines, MCP server, prompt-injection & PII guard.",
+  tags:["CrewAI","LangGraph","FastAPI","MCP","Docker · K8s"], tests:209,
+  links:[["Live","https://agentic-finance-crew-deploy.vercel.app"],["🤗 Demo",HF+"agentic-finance-crew"],["Code",GH+"agentic-finance-crew"]],
+  cs:{p:"Handing spend approvals to an LLM is unsafe and unauditable.",
+      s:["Three agents enrich each request; a tested rule engine makes the final call — the model advises, policy decides","MCP server so Claude / ChatGPT / Copilot can submit requests and read decisions (never approve)","Prompt-injection + PII guard (OWASP LLM01/LLM02); flagged requests always go to a human","JWT + RBAC, Postgres + Alembic, immutable audit trail, Prometheus, rate limiting","Model card + per-decision explanation records (EU AI Act-style transparency)"],
+      r:["1,000-case benchmark: 100% accuracy, 0 false approvals","209 tests; CI on Python 3.10–3.12, Docker health check and Postgres integration"]}},
+ {n:"OpsPilot", s:"Spec-driven AI operations agent", cat:["agentic","oss"], flag:"Flagship",
+  d:"Turns plain-language operations tasks into planned, verified work: parse → plan → authorize → execute → verify → report. The LLM proposes, policy decides.",
+  tags:["Node.js","LLM planner","MCP","Prometheus","OpenTelemetry"], tests:354,
+  links:[["🤗 Demo",HF+"opspilot-ai-operations-agent"],["Code",GH+"ops-pilot-agent"]],
+  cs:{p:"Ops teams lose hours to varied, rule-based tasks that are too risky for an unconstrained LLM.",
+      s:["Pluggable LLM planner (Gemini / OpenAI / Claude) validated against a plan contract, deterministic fallback","Human approval for risky steps, prompt-injection defense, idempotency keys (no double payments)","Finance reference workflow with policy, evidence, audit ledger and an assurance console","MCP JSON-RPC adapter, HTTP API, Prometheus /metrics and OpenTelemetry-style traces"],
+      r:["354 automated tests in CI","Every evaluation scenario passes: allowed, blocked, pending, approved, rejected"]}},
+ {n:"AI Video Intelligence", s:"CCTV loss-prevention platform", cat:["cv"], flag:"Flagship",
+  d:"Reviews in-store CCTV offline, detects register, POS-void and floor incidents and builds a risk-ranked, director-ready evidence report.",
+  tags:["Python","OpenCV","OCR","FastAPI"], tests:161,
+  links:[["🤗 Demo",HF+"ai-video-intelligence"],["Demo site","https://furqunali.github.io/lonestar-video-intelligence/"],["Code",GH+"lonestar-video-intelligence"]],
+  cs:{p:"Loss-prevention teams can't watch hours of footage from many stores.",
+      s:["Camera health → detection / tracking / zones → POS-exception risk scoring","Evidence cards with frames and timestamps, plus a chat assistant over findings","Offline-first: no footage leaves the site; the public demo uses synthetic data only"],
+      r:["161 automated tests in CI","Director report built from a single command"]}},
+ {n:"RAG Document Assistant", s:"Grounded answers with citations", cat:["rag","oss"],
+  d:"Chunk → embed → retrieve → grounded answers with citations and an honest “I don't know” below a confidence threshold.",
+  tags:["Python","Embeddings","Retrieval","TF-IDF fallback"],
+  links:[["🤗 Demo",HF+"rag-document-assistant"],["Code",GH+"rag-document-assistant"]],
+  cs:{p:"Staff waste time searching policies and handbooks; plain LLM answers can't be trusted.",
+      s:["Neural embeddings with an automatic TF-IDF fallback so it always runs","Cosine retrieval, citations on every answer, abstains when evidence is weak","Optional LLM generation with an extractive fallback on any error"],r:["Runs fully in the browser on Hugging Face"]}},
+ {n:"hitl-guardrail", s:"Open-source Python package on PyPI", cat:["oss","agentic"],
+  d:"Human-in-the-loop policy guardrail for LLM / AI-agent actions — approve, escalate or reject with an auditable reason and risk score.",
+  tags:["Python","Zero deps","Typed","PyPI"],
+  links:[["PyPI","https://pypi.org/project/hitl-guardrail/"],["Code",GH+"hitl-guardrail"]],
+  cs:{p:"Every agent framework re-invents approval logic.",s:["Framework-agnostic (CrewAI, LangGraph or plain Python)","Typed, zero dependencies, auditable decisions"],r:["Published: pip install hitl-guardrail"]}},
+ {n:"Pricebook Invoice Converter", s:"Vision-LLM document automation", cat:["auto","rag"],
+  d:"Reads multi-vendor invoice images and PDFs and builds import-ready pricebook files with deterministic checks, per-vendor rules and reconciliation.",
+  tags:["Gemini Vision","Python","Validation rules"], tests:77,
+  links:[["🤗 Demo",HF+"pricebook-invoice-converter"],["Code",GH+"pricebook-invoice-converter"]],
+  cs:{p:"Typing vendor invoices into a pricebook is slow and error-prone.",s:["Vision extraction → deterministic writer (the model never writes the file directly)","Per-vendor rules, batch + review queue, reconciliation"],r:["77 automated tests","Public demo ships fictional sample data"]}},
+ {n:"Food & Sales Variance — AI CFO", s:"Budget-vs-actual automation", cat:["auto"],
+  d:"Builds the monthly budget-vs-actual Excel and an executive dashboard in one command, with KPI, revenue-driver and anomaly analysis.",
+  tags:["Python","openpyxl","Analytics"], tests:182,
+  links:[["Demo","https://furqunali.github.io/food-sales-variance-automation/"],["Code",GH+"food-sales-variance-automation"]],
+  cs:{p:"Month-end variance reporting across locations took days of spreadsheet work.",s:["One command: verified Excel + executive HTML dashboard","AI-CFO tab: what changed, why, risk, what to investigate"],r:["182 automated tests in CI"]}},
+ {n:"Digital FTE", s:"Autonomous AI employee agent", cat:["agentic"],
+  d:"Watches an inbox, reasons about each task, recommends a solution and acts after human approval.",
+  tags:["Python","LLM APIs","Email"],
+  links:[["Code",GH+"digital-fte"]],
+  cs:{p:"Routine inbox work interrupts skilled staff all day.",s:["Agent brain + task watcher + email integration","Human approval before any outward action"],r:["Reference build for the Digital FTE pattern"]}}
 ];
-const more=[
-  {t:'PDF → Excel Payroll Extractor',r:'pdf-to-excel-extractor'},
-  {t:'Gemini Chatbot (async LLM)',r:'gemini-chatbot'},
-  {t:'Gemini API Starter',r:'gemini-api-starter'},
-  {t:'Personal Library Manager',r:'personal-library-manager'},
-  {t:'Password Strength Meter',r:'password-strength-meter'},
-  {t:'Number Guessing Game',r:'number-guessing-game'},
-  {t:'Temperature Converter',r:'temperature-converter'},
-  {t:'Python OOP — Full Exercise Series',r:'python-oop-inheritance'}
-];
-const skills=[
-  {h:'Languages',items:['Python','JavaScript','SQL','HTML/CSS']},
-  {h:'Agentic AI & LLMs',items:['CrewAI','LangGraph','Multi-Agent Systems','LLM Agents','Digital FTEs','RAG','MCP','Google Gemini','Human-in-the-loop']},
-  {h:'Frameworks & Tools',items:['React','FastAPI','Streamlit','pandas','openpyxl','Recharts','Docker','Kubernetes']},
-  {h:'Engineering & MLOps',items:['CI/CD (GitHub Actions)','MLOps','Testing / pytest','Workflow Automation','Git','Vercel','Clean Code','Secrets Hygiene']}
-];
+const CATS = [["all","All"],["agentic","Agentic AI"],["rag","RAG & LLM"],["cv","Computer Vision"],["auto","Automation"],["oss","Open Source"]];
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-const gh='https://github.com/furqunali/';
-document.getElementById('featured').innerHTML=featured.map(p=>`
-  <div class="card">
-    <div class="top"><span class="ic">${I[p.ic]}</span><h3>${p.title}</h3>${p.live?'<span class="badge-live">Live</span>':''}</div>
-    <p>${p.desc}</p>
-    <div class="tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>
-    <div class="links">
-      ${p.live?`<a href="${p.live}" target="_blank" rel="noopener">${I.ext} Live demo</a>`:''}
-      <a class="muted" href="${gh}${p.repo}" target="_blank" rel="noopener">${I.code} Code</a>
-    </div>
-  </div>`).join('');
-document.getElementById('more').innerHTML=more.map(m=>`
-  <a href="${gh}${m.r}" target="_blank" rel="noopener"><span class="dot"></span>${m.t}</a>`).join('');
-document.getElementById('skills-list').innerHTML=skills.map(s=>`
-  <div class="skillgroup"><h4>${s.h}</h4><div class="chips">${s.items.map(i=>`<span class="chip">${i}</span>`).join('')}</div></div>`).join('');
+function render(cat){
+  $("#grid").innerHTML = P.map((p,i) => (cat==="all"||p.cat.includes(cat)) ? `
+    <article class="card">
+      <div class="top"><h3>${esc(p.n)}</h3>${p.flag?`<span class="flag">★ ${p.flag}</span>`:""}</div>
+      <div style="color:var(--muted);font-size:13.5px;font-weight:600;margin-top:-6px">${esc(p.s)}</div>
+      <p>${esc(p.d)}</p>
+      <div class="tags">${p.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}${p.tests?`<span class="tag ok">✓ ${p.tests} tests</span>`:""}</div>
+      <div class="links">${p.links.map(([l,u])=>`<a class="btn small" href="${u}" target="_blank" rel="noopener">${esc(l)}</a>`).join("")}
+        <button class="btn small" data-i="${i}">Case study</button></div>
+    </article>` : "").join("");
+}
+$("#filters").innerHTML = CATS.map(([k,l],i)=>`<button class="chip" data-c="${k}" aria-pressed="${i===0}">${l}</button>`).join("");
+$("#filters").addEventListener("click", e => { const b = e.target.closest(".chip"); if(!b) return;
+  document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed", c===b)); render(b.dataset.c); });
+render("all");
+
+const modal = $("#modal");
+$("#grid").addEventListener("click", e => { const b = e.target.closest("[data-i]"); if(!b) return; const p = P[+b.dataset.i];
+  $("#mTitle").textContent = p.n; $("#mSub").textContent = p.s;
+  const li = a => a.map(x=>`<li>${esc(x)}</li>`).join("");
+  $("#mBody").innerHTML = `<h4>Problem</h4><p style="margin:0;color:var(--ink-2)">${esc(p.cs.p)}</p>
+    <h4>What I built</h4><ul>${li(p.cs.s)}</ul><h4>Results</h4><ul>${li(p.cs.r)}</ul>
+    <div class="links" style="margin-top:16px">${p.links.map(([l,u])=>`<a class="btn small" href="${u}" target="_blank" rel="noopener">${esc(l)}</a>`).join("")}</div>`;
+  if(modal.showModal) modal.showModal(); });
+$("#mClose").onclick = () => modal.close();
+modal.addEventListener("click", e => { if(e.target===modal) modal.close(); });
+
+// theme (remembered per browser)
+const root = document.documentElement;
+try { const t = localStorage.getItem("theme"); if(t) root.dataset.theme = t; } catch(e){}
+$("#theme").onclick = () => { root.dataset.theme = root.dataset.theme==="dark" ? "light" : "dark";
+  try { localStorage.setItem("theme", root.dataset.theme); } catch(e){} };
+
+// copy email
+const toast = m => { const t=$("#toast"); t.textContent=m; t.classList.add("on"); setTimeout(()=>t.classList.remove("on"),1800); };
+$("#copyEmail").onclick = async () => { try { await navigator.clipboard.writeText("furqanali2628@gmail.com"); toast("Email copied"); }
+  catch(e){ location.href = "mailto:furqanali2628@gmail.com"; } };
+
+// live GitHub stats (graceful fallback to the static number)
+fetch("https://api.github.com/users/furqunali").then(r => r.ok ? r.json() : null).then(u => {
+  if(u && u.public_repos){ $("#ghRepos").textContent = u.public_repos; $("#ghLive").textContent = "· live"; }
+}).catch(()=>{});
+$("#yr").textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
