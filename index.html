@@ -193,9 +193,12 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:13.5px;text-align:center
 .post-ico{font-size:20px}.post h3{margin:0;font-size:17px;line-height:1.35}.post p{margin:0;color:var(--ink-2);font-size:14.5px}
 .post ul{margin:2px 0 0;padding-left:18px;color:var(--ink-2);font-size:14px}.post li{margin:3px 0}
 .post .links{margin-top:auto}
+.skip{position:absolute;left:-9999px;top:8px;z-index:99;background:var(--brand);color:#04201d;padding:8px 14px;border-radius:8px;font-weight:800}
+.skip:focus{left:12px}
 </style>
 </head>
 <body>
+<a class="skip" href="#top">Skip to content</a>
 <header><div class="wrap nav">
   <a class="brand" href="#top"><img src="brain.svg" alt="" width="34" height="34">Furqan Ali</a>
   <nav class="navlinks" aria-label="Main">
@@ -288,19 +291,19 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:13.5px;text-align:center
       <div class="post-meta"><span class="post-ico">🛠️</span><time>7 Nov 2026</time></div>
       <h3>OpsPilot: an AI operations agent where the LLM proposes and policy decides</h3><p>Most agent demos let the model act directly. In finance and operations that is not acceptable, so OpsPilot runs on one rule: the model may only propose a plan - deterministic policy decides what runs.</p>
       <ul><li>LLM planner (Gemini / OpenAI / Claude) validated against a plan contract, with a deterministic fallback</li><li>Human approval for risky steps and prompt-injection screening (OWASP LLM01)</li><li>Idempotency keys - the same payment can never be prepared twice</li><li>Audit ledger, Prometheus metrics, OpenTelemetry-style traces - 354 automated tests in CI</li></ul>
-      <div class="links"><a class="btn small" href="https://huggingface.co/spaces/FurqanAli12345/opspilot-ai-operations-agent" target="_blank" rel="noopener">🤗 Live demo</a><a class="btn small" href="https://github.com/furqunali/ops-pilot-agent" target="_blank" rel="noopener">Code</a></div>
+      <div class="links"><a class="btn small" href="https://huggingface.co/spaces/FurqanAli12345/opspilot-ai-operations-agent" target="_blank" rel="noopener">🤗 Live demo</a><a class="btn small" href="https://github.com/furqunali/ops-pilot-agent" target="_blank" rel="noopener">Code</a><a class="btn small" href="https://huggingface.co/spaces/FurqanAli12345/furqan-professional-portfolio/discussions/1" target="_blank" rel="noopener" title="Discuss on Hugging Face">💬 Discuss</a></div>
     </article>
     <article class="post">
       <div class="post-meta"><span class="post-ico">💼</span><time>7 Nov 2026</time></div>
       <h3>Agentic Finance Crew: can you trust a multi-agent system with spend approvals?</h3><p>Three agents review every expense - intake, policy analyst, approver - but a tested rule engine makes the final call.</p>
       <ul><li>MCP server: Claude, ChatGPT or Copilot can submit requests and read decisions, but can never approve</li><li>Prompt-injection + PII guard - anything suspicious goes to a human</li><li>Model card + per-decision explanation records for auditors</li><li>1,000-case benchmark: 100% accuracy, 0 false approvals - 209 tests</li></ul>
-      <div class="links"><a class="btn small" href="#try">Try it above ↑</a><a class="btn small" href="https://huggingface.co/spaces/FurqanAli12345/agentic-finance-crew" target="_blank" rel="noopener">🤗 Live demo</a><a class="btn small" href="https://github.com/furqunali/agentic-finance-crew" target="_blank" rel="noopener">Code</a></div>
+      <div class="links"><a class="btn small" href="#try">Try it above ↑</a><a class="btn small" href="https://huggingface.co/spaces/FurqanAli12345/agentic-finance-crew" target="_blank" rel="noopener">🤗 Live demo</a><a class="btn small" href="https://github.com/furqunali/agentic-finance-crew" target="_blank" rel="noopener">Code</a><a class="btn small" href="https://huggingface.co/spaces/FurqanAli12345/furqan-professional-portfolio/discussions/2" target="_blank" rel="noopener" title="Discuss on Hugging Face">💬 Discuss</a></div>
     </article>
     <article class="post">
       <div class="post-meta"><span class="post-ico">🎥</span><time>7 Nov 2026</time></div>
       <h3>AI Video Intelligence: hours of store CCTV turned into a short, risk-ranked report</h3><p>Loss-prevention teams cannot watch every hour of footage. This pipeline does the first pass offline - no footage leaves the site - and hands people only what matters.</p>
       <ul><li>CCTV clip → camera health → detection / tracking / zones → POS-exception risk scoring → human review</li><li>Register, POS-void and floor incidents ranked by risk, with evidence frames and timestamps</li><li>161 automated tests in CI; the demo uses 100% synthetic data</li></ul>
-      <div class="links"><a class="btn small" href="https://huggingface.co/spaces/FurqanAli12345/ai-video-intelligence" target="_blank" rel="noopener">🤗 Live demo</a><a class="btn small" href="https://github.com/furqunali/lonestar-video-intelligence" target="_blank" rel="noopener">Code</a></div>
+      <div class="links"><a class="btn small" href="https://huggingface.co/spaces/FurqanAli12345/ai-video-intelligence" target="_blank" rel="noopener">🤗 Live demo</a><a class="btn small" href="https://github.com/furqunali/lonestar-video-intelligence" target="_blank" rel="noopener">Code</a><a class="btn small" href="https://huggingface.co/spaces/FurqanAli12345/furqan-professional-portfolio/discussions/3" target="_blank" rel="noopener" title="Discuss on Hugging Face">💬 Discuss</a></div>
     </article>
   </div>
 </div></section>
