@@ -156,6 +156,28 @@ dialog::backdrop{background:rgba(5,10,20,.65);backdrop-filter:blur(3px)}
 .contact .btn.primary{background:#2dd4bf;border-color:#2dd4bf;color:#04201d}
 .c-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
 @media(max-width:820px){.contact{grid-template-columns:1fr}.c-links{justify-content:flex-start}}
+/* playground */
+.play{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:820px){.play{grid-template-columns:1fr}}
+.pcard{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.pcard label{display:block;font-size:13px;font-weight:700;color:var(--muted);margin-bottom:12px}
+.pcard input:not([type=checkbox]),.pcard select{display:block;width:100%;margin-top:5px;padding:10px 12px;border-radius:10px;
+  border:1px solid var(--border);background:var(--surface-2);color:var(--ink);font:inherit;font-size:14.5px}
+.prow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pcard label.chk{display:flex;align-items:center;gap:8px;margin-top:28px;color:var(--ink-2)}
+.ex{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:14px;font-size:13px;color:var(--muted)}
+.ex .chip{padding:5px 11px;font-size:12.5px}
+.pnote{font-size:12.5px;color:var(--muted);margin:12px 0 0}
+.dec{display:inline-block;font-weight:900;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:9px}
+.dec.approve{background:color-mix(in srgb,#22c55e 18%,transparent);color:#16a34a}
+.dec.review{background:color-mix(in srgb,#f59e0b 20%,transparent);color:#d97706}
+.dec.reject{background:color-mix(in srgb,#ef4444 18%,transparent);color:#dc2626}
+.meter{height:9px;border-radius:9px;background:var(--surface-2);overflow:hidden;margin:6px 0 2px}
+.meter i{display:block;height:100%;background:linear-gradient(90deg,#22c55e,#f59e0b,#ef4444);transition:width .5s}
+.kv{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.kv div{background:var(--surface-2);border-radius:10px;padding:10px}.kv b{display:block;font-size:20px}.kv span{font-size:12px;color:var(--muted)}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:4px 0 2px}
+.flow b{background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:5px 10px;font-size:12.5px}
+.flow i{color:var(--brand);font-style:normal;font-weight:900}
 footer{padding:30px 0 40px;color:var(--muted);font-size:13.5px;text-align:center}
 .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);
   padding:10px 16px;border-radius:10px;font-weight:700;font-size:14px;opacity:0;transition:.2s;pointer-events:none}
@@ -168,7 +190,7 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:13.5px;text-align:center
 <header><div class="wrap nav">
   <a class="brand" href="#top"><img src="/brain.svg" alt="" width="34" height="34">Furqan Ali</a>
   <nav class="navlinks" aria-label="Main">
-    <a href="#how">How I work</a><a href="#projects">Projects</a><a href="#skills">Skills</a>
+    <a href="#how">How I work</a><a href="#try">Try the agent</a><a href="#projects">Projects</a><a href="#skills">Skills</a>
     <a href="#experience">Experience</a><a class="btn small primary cta" href="#contact">Contact</a>
     <button class="icon-btn" id="theme" aria-label="Toggle light / dark theme" title="Toggle theme">◐</button>
   </nav>
@@ -220,6 +242,30 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:13.5px;text-align:center
     <div class="step"><h3>Prototype</h3><p>A working prototype in days on real (sanitised) data, so the business sees value before big investment.</p></div>
     <div class="step"><h3>Harden</h3><p>Guardrails, human approval, audit trail, tests + CI, evaluations, observability and secure deployment.</p></div>
     <div class="step"><h3>Prove &amp; scale</h3><p>Reconcile every output against the source, measure impact, document and hand over — then scale.</p></div>
+  </div>
+</div></section>
+
+<section id="try"><div class="wrap">
+  <span class="eyebrow">Live playground</span>
+  <h2 class="title">Try the agent</h2>
+  <p class="sub">Submit an expense to the <b>Agentic Finance Crew</b> decision engine — the same deterministic guardrail that sits
+    behind the AI agents. It runs entirely in your browser: nothing is sent anywhere. The model advises; policy decides.</p>
+  <div class="play">
+    <form class="pcard" id="pform" autocomplete="off">
+      <div class="prow"><label>Employee<input id="pEmp" value="A. Rivera"></label>
+        <label>Category<select id="pCat"><option>software</option><option>travel</option><option>meals</option><option>equipment</option><option>other</option></select></label></div>
+      <div class="prow"><label>Amount (USD)<input id="pAmt" type="number" step="0.01" value="149"></label>
+        <label class="chk"><input id="pRec" type="checkbox" checked> Receipt attached</label></div>
+      <label>Description<input id="pDesc" value="Design tool annual seat"></label>
+      <button class="btn primary" type="submit">Review request →</button>
+      <div class="ex"><span>Try:</span>
+        <button type="button" class="chip" data-ex='["A. Rivera","software",149,true,"Design tool annual seat"]'>Compliant</button>
+        <button type="button" class="chip" data-ex='["L. Moreau","meals",180,false,"Team dinner, no receipt"]'>No receipt</button>
+        <button type="button" class="chip" data-ex='["S. Kim","equipment",2500,true,"Workstation refresh"]'>Over $2,000</button>
+        <button type="button" class="chip" data-ex='["P. Silva","software",-5,false,"Malformed refund"]'>Malformed</button></div>
+      <p class="pnote">Demo policy: auto-approve ≤ $200 · human sign-off &gt; $2,000 · receipt required &gt; $50. Fictional data.</p>
+    </form>
+    <div class="pcard" id="pout" aria-live="polite"><div style="color:var(--muted)">Submit a request to see the decision.</div></div>
   </div>
 </div></section>
 
@@ -298,6 +344,7 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:13.5px;text-align:center
   <h3 id="mTitle"></h3><p id="mSub"></p></div><div class="m-body" id="mBody"></div></dialog>
 <div class="toast" id="toast" role="status"></div>
 
+<script src="/agent-engine.js"></script>
 <script>
 const GH = "https://github.com/furqunali/", HF = "https://huggingface.co/spaces/FurqanAli12345/";
 const P = [
@@ -373,7 +420,8 @@ const modal = $("#modal");
 $("#grid").addEventListener("click", e => { const b = e.target.closest("[data-i]"); if(!b) return; const p = P[+b.dataset.i];
   $("#mTitle").textContent = p.n; $("#mSub").textContent = p.s;
   const li = a => a.map(x=>`<li>${esc(x)}</li>`).join("");
-  $("#mBody").innerHTML = `<h4>Problem</h4><p style="margin:0;color:var(--ink-2)">${esc(p.cs.p)}</p>
+  const flow = FLOW[p.n] ? `<h4>Architecture</h4><div class="flow">${FLOW[p.n].map(x=>`<b>${esc(x)}</b>`).join("<i>→</i>")}</div>` : "";
+  $("#mBody").innerHTML = flow + `<h4>Problem</h4><p style="margin:0;color:var(--ink-2)">${esc(p.cs.p)}</p>
     <h4>What I built</h4><ul>${li(p.cs.s)}</ul><h4>Results</h4><ul>${li(p.cs.r)}</ul>
     <div class="links" style="margin-top:16px">${p.links.map(([l,u])=>`<a class="btn small" href="${u}" target="_blank" rel="noopener">${esc(l)}</a>`).join("")}</div>`;
   if(modal.showModal) modal.showModal(); });
@@ -396,6 +444,56 @@ fetch("https://api.github.com/users/furqunali").then(r => r.ok ? r.json() : null
   if(u && u.public_repos){ $("#ghRepos").textContent = u.public_repos; $("#ghLive").textContent = "· live"; }
 }).catch(()=>{});
 $("#yr").textContent = new Date().getFullYear();
+
+// architecture flows shown in each case study
+var FLOW = {
+  "Agentic Finance Crew": ["Request (API / MCP)","Input guard","Intake agent","Policy analyst","Approver agent","Policy guardrail","Human review","Audit + metrics"],
+  "OpsPilot": ["Task","Injection screen","LLM planner","Authorize (policy)","Execute (idempotent)","Verify","Report + ledger"],
+  "AI Video Intelligence": ["CCTV clip","Camera health","Detection / tracking","Zones + POS events","Risk scoring","Human review","Director report"],
+  "RAG Document Assistant": ["Documents","Chunk","Embed","Retrieve","Grounded answer + citations"],
+  "Pricebook Invoice Converter": ["Invoice image / PDF","Vision LLM extract","Vendor rules","Checks + review","Deterministic .txt writer"],
+  "Food & Sales Variance — AI CFO": ["POS + budget files","Clean + reconcile","KPIs + drivers","Anomaly flags","Excel + dashboard"],
+  "Digital FTE": ["Inbox","Reason","Recommend","Human approval","Act"],
+  "hitl-guardrail": ["Agent action","Policy rules","Risk score","Approve / escalate / reject","Audit reason"]
+};
+
+// live playground on the real Agentic Finance Crew engine (runs in the browser)
+(function(){
+  const F = window.FinanceCrew; if(!F) return;
+  let n = 0, history = [];
+  const label = {auto_approved:["Auto-approved","approve"], needs_human_review:["Human review","review"], rejected:["Rejected","reject"]};
+  function show(r){
+    const [txt, cls] = label[r.decision] || [r.decision, "review"];
+    const risk = Math.max(0, Math.min(100, Math.round(r.risk_score)));
+    const items = [...new Set((r.analysis.violations||[]).concat(r.intake.issues||[]))];
+    $("#pout").innerHTML = `<span class="dec ${cls}">${txt}</span>
+      <div class="kv"><div><b>${risk}</b><span>risk score / 100</span></div><div><b>${Math.round(r.confidence*100)}%</b><span>confidence</span></div>
+      <div><b>${esc(r.intake.normalized_category)}</b><span>category</span></div></div>
+      <div class="meter" aria-hidden="true"><i style="width:${risk}%"></i></div>
+      <p style="margin:12px 0 6px;color:var(--ink-2)">${esc(r.rationale)}</p>
+      ${items.length?`<ul style="margin:0;padding-left:18px;color:var(--muted);font-size:14px">${items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:`<p style="margin:0;color:var(--muted);font-size:14px">No policy findings.</p>`}
+      <p class="pnote">Pipeline: intake → policy analyst → approver → deterministic guardrail. Submit the same request twice to see duplicate detection.</p>`;
+  }
+  $("#pform").addEventListener("submit", e => { e.preventDefault();
+    const req = {id:"DEMO-"+(++n), employee:$("#pEmp").value, category:$("#pCat").value, amount:parseFloat($("#pAmt").value),
+                 has_receipt:$("#pRec").checked, description:$("#pDesc").value};
+    try { show(F.processRequest(req, history)); history.push(req); } catch(err){ $("#pout").textContent = "Could not review this request."; } });
+  document.querySelectorAll("[data-ex]").forEach(b => b.addEventListener("click", () => {
+    const [emp,cat,amt,rec,desc] = JSON.parse(b.dataset.ex);
+    $("#pEmp").value=emp; $("#pCat").value=cat; $("#pAmt").value=amt; $("#pRec").checked=rec; $("#pDesc").value=desc;
+    $("#pform").requestSubmit(); }));
+})();
+
+// count-up animation for the proof numbers
+(function(){
+  const els = document.querySelectorAll("[data-count]");
+  if(!("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const io = new IntersectionObserver(es => es.forEach(en => { if(!en.isIntersecting) return; io.unobserve(en.target);
+    const el = en.target, end = +el.dataset.count, t0 = performance.now();
+    const step = t => { const k = Math.min(1,(t-t0)/900); el.textContent = Math.round(end*k*(2-k)); if(k<1) requestAnimationFrame(step); };
+    requestAnimationFrame(step); }), {threshold:.4});
+  els.forEach(e => io.observe(e));
+})();
 </script>
 </body>
 </html>
