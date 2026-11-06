@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://furqan-ali-portfolio-dun.vercel.app">
 <meta property="og:image" content="https://furqan-ali-portfolio-dun.vercel.app/icon.png">
 <meta name="theme-color" content="#0a1120">
-<link rel="icon" type="image/png" href="/icon.png">
+<link rel="icon" type="image/png" href="icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -184,19 +184,29 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:13.5px;text-align:center
 .toast.on{opacity:1}
 @media print{header,.filters,.cta-row,.links,.c-links,.icon-btn{display:none!important}section{padding:20px 0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.gh-banner + .hero .hero-inner{padding-top:30px}
+
+/* updates / build log */
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}@media(max-width:980px){.posts{grid-template-columns:1fr}}
+.post{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+.post-meta{display:flex;align-items:center;gap:10px;font-size:12.5px;font-weight:700;color:var(--muted)}
+.post-ico{font-size:20px}.post h3{margin:0;font-size:17px;line-height:1.35}.post p{margin:0;color:var(--ink-2);font-size:14.5px}
+.post ul{margin:2px 0 0;padding-left:18px;color:var(--ink-2);font-size:14px}.post li{margin:3px 0}
+.post .links{margin-top:auto}
 </style>
 </head>
 <body>
 <header><div class="wrap nav">
-  <a class="brand" href="#top"><img src="/brain.svg" alt="" width="34" height="34">Furqan Ali</a>
+  <a class="brand" href="#top"><img src="brain.svg" alt="" width="34" height="34">Furqan Ali</a>
   <nav class="navlinks" aria-label="Main">
-    <a href="#how">How I work</a><a href="#try">Try the agent</a><a href="#projects">Projects</a><a href="#skills">Skills</a>
+    <a href="#how">How I work</a><a href="#try">Try the agent</a><a href="#updates">Updates</a><a href="#projects">Projects</a><a href="#skills">Skills</a>
     <a href="#experience">Experience</a><a class="btn small primary cta" href="#contact">Contact</a>
     <button class="icon-btn" id="theme" aria-label="Toggle light / dark theme" title="Toggle theme">◐</button>
   </nav>
 </div></header>
 
 <main id="top">
+<div class="wrap gh-banner" style="padding-top:18px"><img src="banner.png" alt="Furqan Ali — Senior AI Engineer: Agentic AI, Digital FTEs, RAG, Automation, MLOps" width="1200" height="300" style="width:100%;height:auto;border-radius:16px;display:block;box-shadow:var(--shadow)"></div>
 <section class="hero"><div class="wrap">
   <div class="hero-inner">
     <div>
@@ -217,7 +227,7 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:13.5px;text-align:center
       </div>
     </div>
     <div class="avatar-card">
-      <img src="/icon.png" alt="Furqan Ali AI brain logo" width="150" height="150">
+      <img src="icon.png" alt="Furqan Ali AI brain logo" width="150" height="150">
       <div style="font-weight:800;font-size:18px">Furqan Ali</div>
       <div style="color:var(--muted);font-size:14px">Sugarland Petroleum, Inc. · Remote</div>
       <div style="color:var(--muted);font-size:14px;margin-bottom:10px">Karachi, Pakistan</div>
@@ -266,6 +276,32 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:13.5px;text-align:center
       <p class="pnote">Demo policy: auto-approve ≤ $200 · human sign-off &gt; $2,000 · receipt required &gt; $50. Fictional data.</p>
     </form>
     <div class="pcard" id="pout" aria-live="polite"><div style="color:var(--muted)">Submit a request to see the decision.</div></div>
+  </div>
+</div></section>
+
+<section id="updates"><div class="wrap">
+  <span class="eyebrow">Build log</span>
+  <h2 class="title">Latest updates</h2>
+  <p class="sub">What I shipped recently - each with a live demo and the code.</p>
+  <div class="posts">
+    <article class="post">
+      <div class="post-meta"><span class="post-ico">🛠️</span><time>7 Nov 2026</time></div>
+      <h3>OpsPilot: an AI operations agent where the LLM proposes and policy decides</h3><p>Most agent demos let the model act directly. In finance and operations that is not acceptable, so OpsPilot runs on one rule: the model may only propose a plan - deterministic policy decides what runs.</p>
+      <ul><li>LLM planner (Gemini / OpenAI / Claude) validated against a plan contract, with a deterministic fallback</li><li>Human approval for risky steps and prompt-injection screening (OWASP LLM01)</li><li>Idempotency keys - the same payment can never be prepared twice</li><li>Audit ledger, Prometheus metrics, OpenTelemetry-style traces - 354 automated tests in CI</li></ul>
+      <div class="links"><a class="btn small" href="https://huggingface.co/spaces/FurqanAli12345/opspilot-ai-operations-agent" target="_blank" rel="noopener">🤗 Live demo</a><a class="btn small" href="https://github.com/furqunali/ops-pilot-agent" target="_blank" rel="noopener">Code</a></div>
+    </article>
+    <article class="post">
+      <div class="post-meta"><span class="post-ico">💼</span><time>7 Nov 2026</time></div>
+      <h3>Agentic Finance Crew: can you trust a multi-agent system with spend approvals?</h3><p>Three agents review every expense - intake, policy analyst, approver - but a tested rule engine makes the final call.</p>
+      <ul><li>MCP server: Claude, ChatGPT or Copilot can submit requests and read decisions, but can never approve</li><li>Prompt-injection + PII guard - anything suspicious goes to a human</li><li>Model card + per-decision explanation records for auditors</li><li>1,000-case benchmark: 100% accuracy, 0 false approvals - 209 tests</li></ul>
+      <div class="links"><a class="btn small" href="#try">Try it above ↑</a><a class="btn small" href="https://huggingface.co/spaces/FurqanAli12345/agentic-finance-crew" target="_blank" rel="noopener">🤗 Live demo</a><a class="btn small" href="https://github.com/furqunali/agentic-finance-crew" target="_blank" rel="noopener">Code</a></div>
+    </article>
+    <article class="post">
+      <div class="post-meta"><span class="post-ico">🎥</span><time>7 Nov 2026</time></div>
+      <h3>AI Video Intelligence: hours of store CCTV turned into a short, risk-ranked report</h3><p>Loss-prevention teams cannot watch every hour of footage. This pipeline does the first pass offline - no footage leaves the site - and hands people only what matters.</p>
+      <ul><li>CCTV clip → camera health → detection / tracking / zones → POS-exception risk scoring → human review</li><li>Register, POS-void and floor incidents ranked by risk, with evidence frames and timestamps</li><li>161 automated tests in CI; the demo uses 100% synthetic data</li></ul>
+      <div class="links"><a class="btn small" href="https://huggingface.co/spaces/FurqanAli12345/ai-video-intelligence" target="_blank" rel="noopener">🤗 Live demo</a><a class="btn small" href="https://github.com/furqunali/lonestar-video-intelligence" target="_blank" rel="noopener">Code</a></div>
+    </article>
   </div>
 </div></section>
 
@@ -344,7 +380,7 @@ footer{padding:30px 0 40px;color:var(--muted);font-size:13.5px;text-align:center
   <h3 id="mTitle"></h3><p id="mSub"></p></div><div class="m-body" id="mBody"></div></dialog>
 <div class="toast" id="toast" role="status"></div>
 
-<script src="/agent-engine.js"></script>
+<script src="agent-engine.js"></script>
 <script>
 const GH = "https://github.com/furqunali/", HF = "https://huggingface.co/spaces/FurqanAli12345/";
 const P = [
